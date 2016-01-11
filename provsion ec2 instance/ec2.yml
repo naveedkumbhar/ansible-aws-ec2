@@ -6,7 +6,7 @@
 
   tasks:
 
-    - name: Provision a set of instances
+    - name: Provision (a set of) instance(s)
       ec2:
          key_name: virginia
          group: launch-wizard-2
