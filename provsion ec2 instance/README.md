@@ -17,3 +17,6 @@ ansible-play book will perform following tasks:
 8: exact_count= is the limit of instance you want to launch at once.
 
 9: It will give tag name Demo to instance ( launched )
+
+
+root@linuxguy:-# ansible-playbook ec2.yml
