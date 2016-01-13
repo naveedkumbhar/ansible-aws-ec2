@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+
+    - name: EC2 key pair
+      ec2_key:
+       name: server
+       region: us-east-1
+      with_file: /root/.ssh/id_rsa.pub
