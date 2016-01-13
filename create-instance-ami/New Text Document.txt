@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+
+  tasks:
+    - name: Creating AMI from an instance
+      ec2_ami:
+         instance_id: i-89d76f3f
+         image_id: ami-8997afe0
+         region: us-east-1
+         wait: yes
+         name: CentOS6.5
+         tags:
+           Name: CentOS 6.5 AMI
+           Service: Test CentOS
+      register: instance
