@@ -1,8 +1,8 @@
 ansible-play book will perform following tasks:
 
-1: It will provision Ec2 Instance 
+1: It will provision EC2 Instance 
 
-2: Launch instance wiht keyname: virginia ( must be created first )
+2: Launch instance with keyname: virginia ( must be created first )
 
 3: Assign security group to instance ( already created ) name can be anything.
 
