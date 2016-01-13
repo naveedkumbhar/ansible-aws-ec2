@@ -18,5 +18,7 @@ ansible-play book will perform following tasks:
 
 9: It will give tag name Demo to instance ( launched )
 
+10: it will auto assign public ip to instance
+
 
 root@linuxguy:-# ansible-playbook ec2.yml
