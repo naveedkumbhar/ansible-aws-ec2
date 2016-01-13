@@ -1,4 +1,3 @@
-
 ---
 - hosts: localhost
   connection: local
@@ -6,18 +5,19 @@
 
   tasks:
 
-    - name: Provision (a set of) instance(s)
+    - name: Provision a set of instances
       ec2:
          key_name: virginia
-         group: launch-wizard-2
+         group: SSH-HTTP-SG
          region: us-east-1
          instance_type: t1.micro
          image: ami-8997afe0
          vpc_subnet_id: subnet-1edec669
          wait: true
+         assign_public_ip: yes
          exact_count: 1
          count_tag:
-            Name: Demo
+            Name: Centos
          instance_tags:
-            Name: Demo
+            Name: Centos6.5
       register: ec2
