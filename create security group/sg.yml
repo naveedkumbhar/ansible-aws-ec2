@@ -7,8 +7,8 @@
   tasks:
     - name: Creating Security group in VPC
       ec2_group:
-        name: SSH-SG
-        description: Allow only ssh from anywhere
+        name: SSH-HTTP-SG
+        description: Allow ssh/http from anywhere
         vpc_id: vpc-4a3ce52e
         region: us-east-1
         rules:
@@ -16,3 +16,9 @@
             from_port: 22
             to_port: 22
             cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: 0.0.0.0/0
+      register: sg
+
