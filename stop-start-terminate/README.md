@@ -8,11 +8,12 @@ This ansible-play book will perform following tasks:
 
 4: You can stop/start/terminate multiple instances at a time by using this pattern:
 
-instance_ids:
 
-  - 'i-31fb2387'
+
+   instance_ids:
+   
+           - 'i-31fb2387'
            
-  - 'i-78c870ce'
-           
+           - 'i-78c870ce'
            
 Thanks
