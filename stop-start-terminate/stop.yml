@@ -4,7 +4,7 @@
   gather_facts: false
 
   tasks:
-    - name: stop instance by instance id
+    - name: stop/stop/terminate instance by instance id
       ec2:
          instance_ids: i-8fa87a06
          state: stopped # stopped ( it will stop instance ) # running ( it will make instance in running state) # absent ( it will terminate instance )
