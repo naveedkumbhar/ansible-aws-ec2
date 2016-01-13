@@ -10,10 +10,8 @@ This ansible-play book will perform following tasks:
 
 
 
-   instance_ids:
-   
+instance_ids:
+
            - 'i-31fb2387'
            
            - 'i-78c870ce'
-           
-Thanks
