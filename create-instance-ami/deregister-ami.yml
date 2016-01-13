@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+
+  tasks:
+    - name: Deleting AMI using AMI ID
+      ec2_ami:
+         image_id: ami-06e5be6c
+         region: us-east-1
+         wait: yes
+         state: absent
+      register: instance
