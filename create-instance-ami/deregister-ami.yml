@@ -11,4 +11,5 @@
          region: us-east-1
          wait: yes
          state: absent
+		 delete_snapshot: True
       register: instance
