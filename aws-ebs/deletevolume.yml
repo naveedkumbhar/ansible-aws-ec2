@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: True
+  tasks:
+    - name: Deleting volume
+      ec2_vol:
+          id: vol-1d5067c1
+          state: absent
+          region: us-east-1

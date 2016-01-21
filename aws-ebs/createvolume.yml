@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: localhost
+  gather_facts: True
+  tasks:
+  - name: Creating EBS volume
+    ec2_vol:
+      volume_size: 5
+      volume_type: gp2
+      region: us-east-1
+      zone: us-east-1b
+      device_name: /dev/xvdf
