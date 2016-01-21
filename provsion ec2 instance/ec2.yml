@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision a set of instances
+      ec2:
+         key_name: virginia
+         group: SSH-HTTP-SG
+         region: us-east-1
+         instance_type: t1.micro
+         image: ami-8997afe0
+         vpc_subnet_id: subnet-1edec669
+         wait: true
+         assign_public_ip: yes
+         exact_count: 1
+         count_tag:
+            Name: Centos
+         instance_tags:
+            Name: Centos6.5
+      register: ec2
